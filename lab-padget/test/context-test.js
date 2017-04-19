@@ -2,21 +2,27 @@
 
 console.log('evaluating context.js');
 
-// const assert = require('assert');
-// const reqContext = require('../lib/context.js');
+const assert = require('assert');
+const reqContext = require('../lib/context.js');
 
+let newPlant = new reqContext.Plant('Tomato', '1/4 in', 4, 'full', 24);
 
-// const assert = require('assert');
-// const hi = require('../lib/context.js');
-// let name = 'Michael';
-//
-// describe('hello.js', function() {
-//   describe('#greetObject', function() {
-//     it('should return a string with greeting and name', function() {
-//       assert.equal(hi.greetObject(name), 'Hello Michael');
-//     });
-//     it('should return a string', function() {
-//       assert.equal(typeof hi.greetObject(name), 'string');
-//     });
-//   });
-// });
+describe('context.js', function() {
+  describe('#Plant', function() {
+    it('should return a string for plant name', function() {
+      assert.equal(newPlant.name, 'Tomato');
+    });
+    it('should return a string with planting depth', function() {
+      assert.equal(typeof newPlant.depth, 'string');
+    });
+    it('should return a number with days until germination', function() {
+      assert.equal(typeof newPlant.days, 'number');
+    });
+    it('should return a string with preferred sun', function() {
+      assert.equal(typeof newPlant.sun, 'string');
+    });
+    it('should return a number with days until germination', function() {
+      assert.equal(typeof newPlant.height, 'number');
+    });
+  });
+});

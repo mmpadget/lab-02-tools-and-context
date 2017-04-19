@@ -1,7 +1,5 @@
 'use strict';
 
-// create a module (file), and export the functionality, for each context management method; Call and Apply.
-
 module.exports = exports = {};
 
 exports.Seed = function(name, depth, days) {
